@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap');
+
+/* Global Styles */
+
+*, *::before, *::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    font-size: 16px;
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+button
+{
+    outline: none;
+    border: none;
+}
+
+section
+{
+    width: 100%;
+    min-height: 90vh;
+}
+/* Navbar Styles */
+
+header
+{
+    width: 100%;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+nav
+{
+    width: 100%;
+    height: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav button
+{
+    background-color: #13183F;
+    color: #FFF;
+    border-radius: 28px;
+    outline: none;
+    padding: 14px 30px;
+    font-weight: 700;
+}
+
+nav button:hover
+{
+    cursor: pointer;
+    background-color: #666CA3;
+}
+
+/* Main Section Styles */
+
+section.main
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.main-container
+{
+    min-height: inherit;
+    width: 100%;
+    height: 100%;
+    max-width: 1240px;
+    display: flex;
+    padding: 0 30px;
+}
+
+.main-container img
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(30%, -15%);
+    pointer-events: none;
+}
+
+.main-container img.img-desktop
+{
+    display: block;
+}
+
+.main-container img.img-tablet
+{
+    display: none;
+}
+
+.main-container img.img-phone
+{
+    display: none;
+}
+
+.left-container
+{
+    min-height: inherit;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-container h1
+{
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    color: #13183F;
+}
+
+.left-container h4
+{
+    color:#83869A;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 200%;
+    max-width: 70%;
+    margin: 5% 0;
+}
+
+.left-container button
+{
+    background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+    color: #FFF;
+    border-radius: 31px;
+    outline: none;
+    padding: 17px 31px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    width: fit-content;
+}
+
+.left-container button:hover
+{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    cursor: pointer;
+}
+
+/* Section Grid Styles */
+
+section.grid
+{
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid-container
+{
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-row-gap: 3rem;
+    grid-column-gap: 3rem;
+    padding: 5% 30px 10% 30px;
+}
+
+.grid-cell.main
+{
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    padding: 64px 32px;
+    display: block;
+}
+
+.grid-cell.main h2
+{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FFF;
+    max-width: 80%;
+}
+
+.grid-cell
+{
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+    border-radius: 15px;
+    position: relative;
+    min-height: 346px;
+    padding: 64px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-cell h3
+{
+    color: #13183F;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.grid-cell h4
+{
+    color: #83869A;
+    font-weight: 500;
+    font-size: 1.125rem;
+    max-width: 80%;
+    line-height: 180%;
+}
+
+.grid-cell h5
+{
+    color: #F74780;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.grid-cell h5:hover
+{
+    color: #FFA7C3;
+    cursor: pointer;
+}
+
+.icon-container
+{
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:translate( 50%, -50%);
+    display: flex;
+    justify-content: center;
+    transition: transform 150ms ease-in-out;
+}
+
+/* .icon-container:hover
+{
+    transform: scale(1.2);
+} */
+
+
+/* Footer Styles */
+
+footer
+{
+    width: 100%;
+    min-height: 10vh;
+    background-color: #13183F;
+    display: flex;
+    justify-content: center;
+}
+
+footer div
+{
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+footer button
+{
+    color: #FFF;
+    border-radius: 28px;
+    outline: none;
+    padding: 14px 30px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+}
+
+footer button:hover
+{
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+@media screen and (max-width: 1024px) 
+{
+    html, body {
+        font-size: 14px;
+    }
+
+    .left-container
+    {
+        width: 55%;
+        margin-top: -5%;
+    }
+
+    .left-container h1 
+    {
+        font-size: 2.75rem;
+    }
+
+    .left-container h4
+    {
+        max-width: 100%;
+        margin: 6% 0;
+    }
+
+    .main-container img
+    {
+        transform: translate(40%, -13%);
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .main-container img.img-desktop
+    {
+        display: none;
+    }
+
+    .main-container img.img-tablet
+    {
+        display: block;
+    }
+
+    .main-container img.img-phone
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) 
+{
+    html, body
+    {
+        font-size: 13px;
+    }
+
+    .main-container
+    {
+        flex-wrap: wrap;
+        padding: 50px 0px;
+    }
+
+    nav, footer div
+    {
+        padding: 0 20px;
+    }
+
+
+    .grid-container
+    {
+        padding: 5% 20px 10% 20px;
+    }
+
+    .left-container
+    {
+        width: 100%;
+        min-height: fit-content;
+        padding: 0 20px;
+        margin-top: 0;
+    }
+
+    .main-container img.img-desktop
+    {
+        display: none;
+    }
+
+    .main-container img.img-tablet
+    {
+        display: none;
+    }
+
+    .main-container img.img-phone
+    {
+        display: block;
+        position: relative;
+        transform: translate(0, 0);
+        width: 100%;
+    }
+
+    .grid-container
+    {
+        grid-row-gap: 5rem;
+    }
+    .grid-cell
+    {
+        min-height: 270px;
+    }
+
+    .grid-cell.main {
+        padding: 34px 32px;
+        min-height: fit-content;
+    }
+
+    .grid-cell.main h2
+    {
+        max-width: 100%;
+    }
+}
